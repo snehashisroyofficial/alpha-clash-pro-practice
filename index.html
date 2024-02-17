@@ -38,28 +38,29 @@
     <main class=" bg-[url(./images/photo-2.jpg)] min-h-screen bg-no-repeat bg-cover">
 
         <!-- home area part-1  -->
-        <section class=" flex flex-col items-center min-h-screen justify-center hidden">
+        <section id="home-area" class=" flex flex-col items-center min-h-screen justify-center ">
             <div class="text-white flex flex-col items-center gap-8 ">
                 <h1 class="text-9xl  uppercase font-anton ">alpha clash pro</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white">Play Now</button>
+                <button onclick="playGame()" class="btn bg-white">Play Now</button>
             </div>
         </section>
 
 
         <!-- play ground area part 2  -->
-        <section class=" font-poppins py-8 hidden">
+        <section id="play-ground" class=" font-poppins py-8 hidden">
 
             <!-- container  -->
             <div class="flex flex-col justify-center items-center gap-8">
 
                 <!-- top area  -->
-                <div class="artboard artboard-horizontal phone-5 bg-[#FFFFFFCC] border-8 border-black rounded-3xl">
+                <div
+                    class="artboard artboard-horizontal phone-5  border-[20px]  border-[#010313CC] bg-[#ffffffb3] rounded-3xl">
                     <div class="flex justify-center">
-                        <p class="p-4 bg-black rounded-b-2xl text-white">Don't watch keyboard while playing...</p>
+                        <p class="p-4 bg-[#010313CC] rounded-b-2xl text-white">Don't watch keyboard while playing...</p>
                     </div>
                     <div class="flex justify-center h-full items-center ">
-                        <p class="text-9xl font-extrabold uppercase">Y</p>
+                        <p id="center-alphabets" class="text-9xl font-extrabold uppercase">Y</p>
                     </div>
 
                 </div>
@@ -67,49 +68,52 @@
                 <!-- middle | keyboard area  -->
                 <div>
                     <div class="flex justify-center gap-3 my-3 w-full">
-                        <kbd class="kbd kbd-lg">q</kbd>
-                        <kbd class="kbd kbd-lg">w</kbd>
-                        <kbd class="kbd kbd-lg">e</kbd>
-                        <kbd class="kbd kbd-lg">r</kbd>
-                        <kbd class="kbd kbd-lg">t</kbd>
-                        <kbd class="kbd kbd-lg">y</kbd>
-                        <kbd class="kbd kbd-lg">u</kbd>
-                        <kbd class="kbd kbd-lg">i</kbd>
-                        <kbd class="kbd kbd-lg">o</kbd>
-                        <kbd class="kbd kbd-lg">p</kbd>
+                        <kbd id="q" class="kbd kbd-lg">q</kbd>
+                        <kbd id="w" class="kbd kbd-lg">w</kbd>
+                        <kbd id="e" class="kbd kbd-lg">e</kbd>
+                        <kbd id="r" class="kbd kbd-lg">r</kbd>
+                        <kbd id="t" class="kbd kbd-lg">t</kbd>
+                        <kbd id="y" class="kbd kbd-lg">y</kbd>
+                        <kbd id="u" class="kbd kbd-lg">u</kbd>
+                        <kbd id="i" class="kbd kbd-lg">i</kbd>
+                        <kbd id="o" class="kbd kbd-lg">o</kbd>
+                        <kbd id="p" class="kbd kbd-lg">p</kbd>
                     </div>
                     <div class="flex justify-center gap-3 my-3 w-full">
-                        <kbd class="kbd kbd-lg">a</kbd>
-                        <kbd class="kbd kbd-lg">s</kbd>
-                        <kbd class="kbd kbd-lg">d</kbd>
-                        <kbd class="kbd kbd-lg">f</kbd>
-                        <kbd class="kbd kbd-lg">g</kbd>
-                        <kbd class="kbd kbd-lg">h</kbd>
-                        <kbd class="kbd kbd-lg">j</kbd>
-                        <kbd class="kbd kbd-lg">k</kbd>
-                        <kbd class="kbd kbd-lg">l</kbd>
+                        <kbd id="a" class="kbd kbd-lg">a</kbd>
+                        <kbd id="s" class="kbd kbd-lg">s</kbd>
+                        <kbd id="d" class="kbd kbd-lg">d</kbd>
+                        <kbd id="f" class="kbd kbd-lg">f</kbd>
+                        <kbd id="g" class="kbd kbd-lg">g</kbd>
+                        <kbd id="h" class="kbd kbd-lg">h</kbd>
+                        <kbd id="j" class="kbd kbd-lg">j</kbd>
+                        <kbd id="k" class="kbd kbd-lg">k</kbd>
+                        <kbd id="l" class="kbd kbd-lg">l</kbd>
                     </div>
                     <div class="flex justify-center gap-3 my-3 w-full">
-                        <kbd class="kbd kbd-lg">z</kbd>
-                        <kbd class="kbd kbd-lg">x</kbd>
-                        <kbd class="kbd kbd-lg">c</kbd>
-                        <kbd class="kbd kbd-lg">v</kbd>
-                        <kbd class="kbd kbd-lg">b</kbd>
-                        <kbd class="kbd kbd-lg">n</kbd>
-                        <kbd class="kbd kbd-lg">m</kbd>
-                        <kbd class="kbd kbd-lg">/</kbd>
+                        <kbd id="z" class="kbd kbd-lg">z</kbd>
+                        <kbd id="x" class="kbd kbd-lg">x</kbd>
+                        <kbd id="c" class="kbd kbd-lg">c</kbd>
+                        <kbd id="v" class="kbd kbd-lg">v</kbd>
+                        <kbd id="b" class="kbd kbd-lg">b</kbd>
+                        <kbd id="n" class="kbd kbd-lg">n</kbd>
+                        <kbd id="m" class="kbd kbd-lg">m</kbd>
+                        <kbd id="/" class="kbd kbd-lg">/</kbd>
                     </div>
                 </div>
 
                 <!-- buttom | life & score area  -->
                 <div class=" flex justify-between w-3/4">
+
+                    <!-- life area  -->
                     <button
                         class="btn bg-gradient-to-r from-pink-500 to-violet-800 text-white rounded-full border-none">Life
                         <img src="./images/heart.svg" alt="">
-                        <span>1</span></button>
+                        <span id="life-area">1</span></button>
+                    <!-- score area  -->
                     <button
                         class="btn bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full border-none">Score
-                        <img src="./images/money.svg" alt=""> <span>1</span></button>
+                        <img src="./images/money.svg" alt=""> <span id="score-area">1</span></button>
 
                 </div>
 
@@ -120,7 +124,7 @@
 
 
         <!-- score area  part 3 -->
-        <section class="score flex felx-col justify-center items-center min-h-screen font-poppins">
+        <section class=" hidden score flex felx-col justify-center items-center min-h-screen font-poppins">
             <div
                 class=" text-white text-center p-10 space-y-5 bg-[linear-gradient(-45deg,_#001169,_#440069)] rounded-[30px]">
                 <h1 class="text-8xl"><span class="font-extrabold">Score : </span><span> 1</span>
@@ -135,6 +139,8 @@
 
     </main>
 
+    <script src="./main.js"></script>
+    <script src="./functions.js"></script>
 </body>
 
 </html>
