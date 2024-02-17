@@ -1,7 +1,14 @@
 
 function playGame() {
+
+    //প্রথমে home area কে লুকাতে হবে 
+
     hideHome('home-area');
+
+    //play ground কে দেখাতে হবে 
     showPlayground('play-ground');
+
+    //এরপরে গেম শুরু করতে হবে 
     continueGame();
 }
 
@@ -9,16 +16,14 @@ function playGame() {
 
 function continueGame() {
 
-    // get random alphabets
+    //যেকোন random word বানাতে হবে 
     const randomWord = getRandomAlphabet();
-    // console.log('this is the random word ', randomWord)
 
-    //show the random word on the screen
+    //random word টিকে স্ক্রীন এ দেখাতে হবে 
     const centerScreen = document.getElementById('center-alphabets')
     centerScreen.innerText = randomWord;
 
-
-    //set background key color 
+    // যে random word টি দেখাবে সেই word টির কীবোর্ড  এর মধ্যে কালার সেট করতে হবে  
     keyboardbackgroundColor(randomWord);
 
 
@@ -29,16 +34,15 @@ function continueGame() {
 document.addEventListener('keyup', keyPressEvent);
 
 function keyPressEvent(event) {
+
+    //কি key press করছি তা জানার জন্য এটি করতে হবে 
     const keyPress = event.key;
-    // console.log('your press a key');      //key press করলে কাজ করছে কিনা চেক করলাম
 
 
     //   বর্তমানে কোথায় random word লেখাটি দেখাচ্ছে 
     const currentDisplayScore = document.getElementById('center-alphabets');
     const currentDisplay = currentDisplayScore.innerText;
     const currentScore = currentDisplay.toLowerCase();
-
-
 
 
     // এখানে আমরা if else ফরমুলা সেট করলাম

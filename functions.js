@@ -19,19 +19,25 @@ function showPlayground(elementId) {
 // GENERATE RANDOM ALPHABETS | WORD 
 function getRandomAlphabet() {
 
-    //generate random alphabet
+    //প্রাথমে কেয়বরদের সব  ওয়ার্ড কে আমরা একটি স্ট্রিং আকারে লিখলাম
     const alphabetString = 'abcdefghijklmnopqrtuvwxyz';
-    const alphabet = alphabetString.split('');             // we generate random word 
 
-    //generate random number between 0-25
+    // এরপরে প্রত্যেকটি ওয়ার্ড কে ভেঙ্গে array তে করলাম 
+    const alphabet = alphabetString.split('');
+
+
+    // ০ থেকে ২৫ এর মধ্যে নাম্বার বানাতে হবে 
     const randomNumbers = Math.random() * 25;
     const index = Math.round(randomNumbers);
 
 
-    //get the final word 
+    // আমাদেরকে random ওয়ার্ড বার করতে হবে 
     const finalword = alphabet[index];
     return finalword;
 }
+
+
+// keyboard key color added 
 
 function keyboardbackgroundColor(elementId) {
     const keyboardHighlight = document.getElementById(elementId);
@@ -39,9 +45,7 @@ function keyboardbackgroundColor(elementId) {
 }
 
 
-
-
-
+// keyboard key color removed
 
 function removeKeyboardbackgroundColor(elementId) {
 
